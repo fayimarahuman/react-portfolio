@@ -1,0 +1,111 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1e293b;
+  flex-wrap: wrap;
+  position: relative;
+}
+body.light .navbar {
+  background: #e2e8f0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: max-height 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f8fafc;
+}
+body.light .nav-links a {
+  color: #0f172a;
+}
+
+.theme-btn, .resume-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resume-btn {
+  background: #38bdf8;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+body.light .bar {
+  background-color: #0f172a;
+}
+
+/* Animate Hamburger */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #1e293b;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  body.light .nav-links {
+    background: #e2e8f0;
+  }
+
+  .nav-links.open {
+    max-height: 500px; /* adjust depending on number of links */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
