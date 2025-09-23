@@ -1,90 +1,71 @@
 .contact {
   padding: 60px 20px;
   text-align: center;
+  background: #0f172a; /* dark professional background */
+  color: #cbd5e1; /* light text */
 }
 
 .contact h2 {
   font-size: 2.2rem;
-  margin-bottom: 10px;
-  color: #800000; /* maroon */
+  margin-bottom: 20px;
+  color: #00d9ff; /* turquoise accent */
 }
 
 .contact-intro {
   margin-bottom: 40px;
   font-size: 1.1rem;
-  color: #444;
+  color: #94a3b8; /* muted light text */
 }
 
 .contact-container {
   display: flex;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Form */
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  outline: none;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #800000; /* maroon */
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #a83232; /* lighter red hover */
-}
-
-/* Info */
 .contact-info {
-  flex: 1;
-  min-width: 250px;
   text-align: left;
-}
-
-.contact-info h3 {
-  margin-bottom: 15px;
-  color: #800000;
+  background: #1e293b;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
 }
 
 .contact-info p {
-  margin: 8px 0;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #cbd5e1;
 }
 
-/* Dark Mode Support */
-.dark-mode .contact-form input,
-.dark-mode .contact-form textarea {
-  background: #2a2a2a;
-  color: #f8f8f8;
-  border: 1px solid #555;
+.contact-info a {
+  color: #00d9ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
-.dark-mode .contact-form button {
-  background: #800000;
+.contact-info a:hover {
+  color: #00b8e6;
+}
+.whatsapp-link {
+  color: #25d366; /* WhatsApp green */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.dark-mode .contact-form button:hover {
-  background: #a83232;
+.whatsapp-link:hover {
+  color: #1ebe5b;
+  text-decoration: underline;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info {
+    text-align: center;
+  }
 }

@@ -1,28 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
 
-const heroImages = [
-  "/images/diffuser1.jpg",
-  "/images/diffuser3.jpg",
-  "/images/nine.jpg",
-];
-
 function Home() {
-  const [currentImage, setCurrentImage] = useState(0);
   const [currentWord, setCurrentWord] = useState(0);
   const [text, setText] = useState("");
 
-  // Hero Image Slider
+  // Typing animation
   useEffect(() => {
-    const imageInterval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(imageInterval);
-  }, []);
-
-  // Typing Animation
-  useEffect(() => {
-    const words = ["Web Developer", "React Enthusiast", "UI/UX Lover"];
+    const words = [
+      "Computer Scientist",
+      "Web & App Developer",
+      "UI/UX Designer",
+      "Graphics Enthusiast",
+    ];
     let index = 0;
     const typingInterval = setInterval(() => {
       setText(words[currentWord].substring(0, index + 1));
@@ -33,31 +23,49 @@ function Home() {
           setCurrentWord((prev) => (prev + 1) % words.length);
         }, 1500);
       }
-    }, 150);
+    }, 120);
     return () => clearInterval(typingInterval);
   }, [currentWord]);
 
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
-      id="home"
-    >
-      <div className="hero-overlay">
-        <div className="hero-content">
-          <h1>Hello, I’m Fayima Rahuman</h1>
-          <h2>
-            I am a <span className="typing">{text}</span>
-          </h2>
-          <div className="hero-buttons">
-            <a href="/resume.pdf" download className="btn-primary">
-              Download CV
-            </a>
-            <a href="/about" className="btn-secondary">
-              About Me
-            </a>
-          </div>
+    <section className="homepage" id="home">
+      {/* Intro Section */}
+      <div className="intro">
+        <h1>
+          Hello, I’m <span className="highlight">Fayima Rahuman</span>
+        </h1>
+        <h2>
+          I am a <span className="typing">{text}</span>
+        </h2>
+        <p className="tagline">
+          I design and develop modern, responsive, and user-focused digital
+          solutions that bring ideas to life.
+        </p>
+      </div>
+
+      {/* Media Section */}
+      <div className="media-section">
+        <div className="video-container">
+          <video autoPlay loop muted playsInline>
+            <source src="/projectvideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+
+        <div className="images-container">
+          <img src="/images/projectimage1.jpg" alt="Project 1" />
+          <img src="/images/projectimage2.jpg" alt="Project 2" />
+        </div>
+      </div>
+
+      {/* Call-to-Action Buttons */}
+      <div className="hero-buttons">
+        <a href="./fayima rahuman CV[1]" download className="btn btn-primary">
+          Download CV
+        </a>
+        <a href="/about" className="btn btn-secondary">
+          About Me
+        </a>
       </div>
     </section>
   );

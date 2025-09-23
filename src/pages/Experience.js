@@ -4,22 +4,22 @@ import "../styles/Experience.css";
 function Experience() {
   const experiences = [
     {
-      role: "Frontend Developer Intern",
-      company: "Tech Solutions Ltd",
-      period: "Jan 2024 - Jun 2024",
-      description: "Worked on creating responsive websites using React and CSS."
+      role: "Diploma in Computer Science",
+      company: "Women's Institute of Technology & Innovation",
+      period: "2023 - Present",
+      description: "Learning web development, Python, Flask, APIs, React, Data Science, and graphics design. Completed multiple projects to build practical skills."
     },
     {
-      role: "Web Developer Trainee",
-      company: "Creative Labs",
-      period: "Jul 2023 - Dec 2023",
-      description: "Built interactive UI components and implemented API integrations."
+      role: "Cashier",
+      company: "Local Restaurant",
+      period: "2022 - 2023",
+      description: "Handled cash transactions, managed customer service, and gained professional workplace experience."
     },
     {
-      role: "Freelance Web Designer",
+      role: "Freelance Projects",
       company: "Self-employed",
-      period: "Mar 2023 - Jun 2023",
-      description: "Designed and developed personal portfolio websites for clients."
+      period: "2023 - Present",
+      description: "Built small web applications, portfolio websites, and graphics designs for practice and skill development."
     }
   ];
 

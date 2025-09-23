@@ -5,6 +5,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(true);
 
+  // Apply body class for theme
   useEffect(() => {
     document.body.className = darkMode ? "dark" : "light";
   }, [darkMode]);

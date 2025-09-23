@@ -29,9 +29,8 @@ function Testimonials() {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(interval);
-  }, [testimonials.length]); // ✅ added dependency to satisfy ESLint
+  }, [testimonials.length]);
 
   return (
     <section className="testimonials" id="testimonials">

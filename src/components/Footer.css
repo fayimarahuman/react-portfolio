@@ -1,11 +1,58 @@
+/* src/styles/Footer.css */
 .footer {
-  background: #1e293b;
-  color: #f8fafc;
+  padding: 20px 0;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  margin-top: 40px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
+
+/* Dark theme (applied when body has class "dark") */
+body.dark .footer {
+  background-color: #1e293b; /* matches navbar */
+  color: #e5e7eb;
+}
+body.dark .footer-links li a {
+  color: #00d9ff;
+}
+body.dark .footer-links li a:hover {
+  color: #ffb400;
+}
+
+/* Light theme (applied when body has class "light") */
 body.light .footer {
-  background: #e2e8f0;
-  color: #0f172a;
+  background-color: #f1f5f9;
+  color: #111827;
+}
+body.light .footer-links li a {
+  color: #0ea5a4;
+}
+body.light .footer-links li a:hover {
+  color: #ffb400;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    gap: 10px;
+  }
 }
