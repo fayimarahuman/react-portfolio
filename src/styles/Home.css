@@ -2,7 +2,7 @@
 .homepage {
   width: 100%;
   min-height: 100vh;
-  padding: 40px 20px; /* reduced top/bottom padding for smaller screens */
+  padding: 40px 20px;
   font-family: "Poppins", sans-serif;
   color: #e5e7eb;
   background: #0f172a;
@@ -37,36 +37,38 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 15px;         /* reduced gap */
-  margin: 20px 0;    /* reduced vertical spacing */
+  gap: 20px; /* space between video and images */
+  margin: 30px 0;
   box-sizing: border-box;
 }
 
 /* Video */
 .video-container {
-  flex: 1 1 500px; /* smaller min width for better responsiveness */
-  max-width: 600px;
+  flex: 1 1 500px;
+  max-width: 650px;
 }
 .video-container video {
   width: 100%;
+  height: 400px; /* desktop height */
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
 }
 
 /* Images */
 .images-container {
-  flex: 1 1 250px; /* smaller min width */
+  flex: 1 1 250px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;       /* reduced gap */
+  gap: 20px; /* gap between images */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .images-container img {
   width: 100%;
-  max-width: 200px; /* reduced max width for mobile */
-  height: auto;
+  max-width: 300px;
+  height: 400px; /* same as video height */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
@@ -80,18 +82,20 @@
 
 /* Buttons */
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px; /* smaller gap for mobile */
+  gap: 15px;
 }
+
 .btn {
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .btn-primary {
   background: #00d9ff;
@@ -101,15 +105,20 @@
   background: #00aacc;
 }
 .btn-secondary {
-  border: 2px solid #ffb400;
-  color: #ffb400;
-}
-.btn-secondary:hover {
-  background: #ffb400;
-  color: #111;
+  border: 2px solid #ffb400; /* orange border */
+  color: #ffb400;            /* orange text */
+  background: transparent;    /* default transparent background */
 }
 
-/* Responsive */
+.btn-secondary:hover {
+  background: #ffb400;       /* orange background on hover */
+  color: #111;               /* dark text on hover */
+}
+
+
+/* Responsive Breakpoints */
+
+/* Medium devices: tablets and small laptops */
 @media (max-width: 992px) {
   .intro h1 {
     font-size: 2.2rem;
@@ -121,12 +130,35 @@
   .media-section {
     flex-direction: column;
     align-items: center;
-    margin: 15px 0; /* smaller vertical margin */
+    gap: 25px;
   }
 
-  .video-container,
-  .images-container {
-    max-width: 100%;
+  .video-container video,
+  .images-container img {
+    height: 360px; /* increased video and image height for tablet */
+  }
+
+  .images-container img {
+    max-width: 48%; /* two images side by side */
+  }
+}
+
+/* Small devices: phones */
+@media (max-width: 576px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+  .intro h2 {
+    font-size: 1.1rem;
+  }
+
+  .media-section {
+    gap: 15px;
+  }
+
+  .video-container video,
+  .images-container img {
+    height: 300px; /* increased height for small phones */
   }
 
   .images-container {
@@ -134,13 +166,12 @@
   }
 
   .images-container img {
-    max-width: 48%; /* two images side by side on mobile */
-    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto; /* maintain aspect ratio */
   }
-}
 
-@media (max-width: 576px) {
-  .images-container img {
-    max-width: 100%; /* stack images on very small screens */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
   }
 }

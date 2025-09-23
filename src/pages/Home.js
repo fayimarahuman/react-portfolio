@@ -1,9 +1,12 @@
+// src/pages/Home.js
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 
 function Home() {
   const [currentWord, setCurrentWord] = useState(0);
   const [text, setText] = useState("");
+  const navigate = useNavigate(); // ✅ React Router navigation
 
   // Typing animation
   useEffect(() => {
@@ -76,9 +79,12 @@ function Home() {
         >
           Download CV
         </a>
-        <a href="/about" className="btn btn-secondary">
+        <button
+          className="btn btn-secondary"
+          onClick={() => navigate("/about")}
+        >
           About Me
-        </a>
+        </button>
       </div>
     </section>
   );

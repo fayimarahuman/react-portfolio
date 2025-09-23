@@ -17,40 +17,31 @@ function About() {
         {/* Right: Text */}
         <div className="about-content">
           <p>
-            Hi! I’m Fayima Rahuman, a passionate and dedicated Web Developer.
-            Since starting my diploma in Computer Science, I have been diving
-            deep into modern web technologies like React for frontend
-            development, Flask for backend APIs, and building full-stack projects
-            that are responsive, dynamic, and user-friendly.
+            Hi! I’m Fayima Rahuman, a computer scientist with a passion for building 
+            modern and efficient digital solutions. I specialize in web and app development, 
+            UI/UX design, and graphic design, combining technical knowledge with creativity 
+            to create responsive, intuitive, and visually appealing projects.
           </p>
 
           <p>
-            I enjoy turning ideas into real-world applications and continuously
-            improving my coding skills. My journey has included working with
-            JavaScript, HTML, CSS, SQL, Python, and frameworks that help me
-            create efficient and professional projects. I take pride in clean,
-            maintainable code and learning best practices along the way.
+            Throughout my diploma in Computer Science, I have gained experience with 
+            technologies like React, Flask, JavaScript, HTML, CSS, SQL, and Python, 
+            building full-stack applications that are both functional and user-friendly. 
+            I also design interfaces and prototypes using Figma to ensure professional 
+            and intuitive user experiences.
           </p>
 
           <p>
-            Beyond coding, I am curious, highly motivated, and enjoy solving
-            problems with technology. I thrive in collaborative environments,
-            love exploring new tools, and am always seeking opportunities to
-            build impactful solutions that make a difference.
+            I enjoy solving problems through technology, continuously learning new tools, 
+            and applying my skills to deliver high-quality projects. My approach is 
+            collaborative, detail-oriented, and focused on creating solutions that 
+            make a real impact.
           </p>
 
           <p>
-            My dream is to become a versatile software engineer and a creative
-            graphic designer. I aim to combine technical expertise with design
-            skills to create applications that are not only functional but also
-            visually appealing.
-          </p>
-
-          <p>
-            Whether it’s building websites, APIs, interactive interfaces, or
-            designing graphics, I am committed to growth, excellence, and
-            delivering professional projects that showcase both creativity and
-            technical proficiency.
+            My goal is to become a versatile software engineer and creative graphics designer, 
+            combining logic and design to develop applications and digital experiences 
+            that are both powerful and aesthetically engaging.
           </p>
         </div>
       </div>
