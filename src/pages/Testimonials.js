@@ -7,19 +7,19 @@ function Testimonials() {
       name: "Emma Johnson",
       role: "Project Manager",
       text: "Fayima is an amazing web developer! She delivered our project on time with exceptional quality.",
-      image: "/images/testimonial1.jpg",
+      image: process.env.PUBLIC_URL + "/images/testimonial1.jpg",
     },
     {
       name: "Ritah Namono",
       role: "Client",
       text: "Working with Fayima was a pleasure. She is detail-oriented and highly professional.",
-      image: "/images/testimonial2.jpg",
+      image: process.env.PUBLIC_URL + "/images/testimonial2.jpg",
     },
     {
       name: "John Doe",
       role: "Team Lead",
       text: "Her coding skills and creativity are top-notch. I highly recommend Fayima for any web project.",
-      image: "/images/testimonial3.jpg",
+      image: process.env.PUBLIC_URL + "/images/testimonial3.jpg",
     },
   ];
 

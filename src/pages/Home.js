@@ -47,20 +47,33 @@ function Home() {
       <div className="media-section">
         <div className="video-container">
           <video autoPlay loop muted playsInline>
-            <source src="/projectvideo.mp4" type="video/mp4" />
+            <source
+              src={process.env.PUBLIC_URL + "/projectvideo.mp4"}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
 
         <div className="images-container">
-          <img src="/images/projectimage1.jpg" alt="Project 1" />
-          <img src="/images/projectimage2.jpg" alt="Project 2" />
+          <img
+            src={process.env.PUBLIC_URL + "/images/projectimage1.jpg"}
+            alt="Project 1"
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/images/projectimage2.jpg"}
+            alt="Project 2"
+          />
         </div>
       </div>
 
       {/* Call-to-Action Buttons */}
       <div className="hero-buttons">
-        <a href="./fayima rahuman CV[1]" download className="btn btn-primary">
+        <a
+          href={process.env.PUBLIC_URL + "/fayima rahuman CV[1].pdf"}
+          download
+          className="btn btn-primary"
+        >
           Download CV
         </a>
         <a href="/about" className="btn btn-secondary">

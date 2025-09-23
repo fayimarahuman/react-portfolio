@@ -2,7 +2,7 @@
 .homepage {
   width: 100%;
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 40px 20px; /* reduced top/bottom padding for smaller screens */
   font-family: "Poppins", sans-serif;
   color: #e5e7eb;
   background: #0f172a;
@@ -28,7 +28,7 @@
   font-size: 1.1rem;
   color: #cbd5e1;
   max-width: 700px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
 }
 
 /* Media Section */
@@ -37,15 +37,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
-  margin: 40px 0;
+  gap: 15px;         /* reduced gap */
+  margin: 20px 0;    /* reduced vertical spacing */
   box-sizing: border-box;
 }
 
 /* Video */
 .video-container {
-  flex: 1 1 600px; /* flexible, min width 600px */
-  max-width: 700px;
+  flex: 1 1 500px; /* smaller min width for better responsiveness */
+  max-width: 600px;
 }
 .video-container video {
   width: 100%;
@@ -55,18 +55,18 @@
 
 /* Images */
 .images-container {
-  flex: 1 1 300px;
+  flex: 1 1 250px; /* smaller min width */
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;       /* reduced gap */
   justify-content: center;
   align-items: center;
 }
 
 .images-container img {
   width: 100%;
-  max-width: 260px;   /* limit size */
-  height: auto;       /* keep aspect ratio */
+  max-width: 200px; /* reduced max width for mobile */
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
@@ -80,11 +80,11 @@
 
 /* Buttons */
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px; /* smaller gap for mobile */
 }
 .btn {
   padding: 12px 24px;
@@ -117,15 +117,30 @@
   .intro h2 {
     font-size: 1.3rem;
   }
+
   .media-section {
     flex-direction: column;
     align-items: center;
+    margin: 15px 0; /* smaller vertical margin */
   }
+
   .video-container,
   .images-container {
     max-width: 100%;
   }
+
+  .images-container {
+    gap: 10px;
+  }
+
   .images-container img {
-    max-width: 100%; /* take full width on small screens */
+    max-width: 48%; /* two images side by side on mobile */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .images-container img {
+    max-width: 100%; /* stack images on very small screens */
   }
 }

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; // ✅ Import Footer
+import Footer from "./components/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -17,7 +17,8 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
+    // 👇 Add basename for GitHub Pages
+    <Router basename={process.env.PUBLIC_URL}>
       {/* Navbar at the top */}
       <Navbar />
 
