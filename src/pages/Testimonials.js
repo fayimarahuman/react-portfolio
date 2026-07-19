@@ -2,50 +2,73 @@ import React, { useState, useEffect } from "react";
 import "../styles/Testimonials.css";
 
 function Testimonials() {
-  const testimonials = [
+
+  const highlights = [
     {
-      name: "Emma Johnson",
-      role: "Project Manager",
-      text: "Fayima is an amazing web developer! She delivered our project on time with exceptional quality.",
-      image: process.env.PUBLIC_URL + "/images/testimonial1.jpg",
+      title: "Full-Stack Application Development",
+      text: "Experienced in building complete software solutions using React, JavaScript, Python, Flask, REST APIs, and databases."
     },
+
     {
-      name: "Ritah Namono",
-      role: "Client",
-      text: "Working with Fayima was a pleasure. She is detail-oriented and highly professional.",
-      image: process.env.PUBLIC_URL + "/images/testimonial2.jpg",
+      title: "AI & Machine Learning Solutions",
+      text: "Developed an AI-powered dental analytics and no-show prediction system using machine learning and data-driven approaches."
     },
+
     {
-      name: "John Doe",
-      role: "Team Lead",
-      text: "Her coding skills and creativity are top-notch. I highly recommend Fayima for any web project.",
-      image: process.env.PUBLIC_URL + "/images/testimonial3.jpg",
+      title: "Problem Solving Through Technology",
+      text: "Passionate about transforming ideas into practical digital solutions that solve real-world challenges."
     },
+
+    {
+      title: "Continuous Learning & Innovation",
+      text: "Actively explores emerging technologies and uses AI-assisted workflows to improve development productivity."
+    }
   ];
+
 
   const [current, setCurrent] = useState(0);
 
+
   useEffect(() => {
+
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
+
+      setCurrent((prev) => (prev + 1) % highlights.length);
+
     }, 5000);
+
+
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+
+  }, [highlights.length]);
+
 
   return (
+
     <section className="testimonials" id="testimonials">
-      <h2>Testimonials</h2>
+
+      <h2>Professional Highlights</h2>
+
+
       <div className="testimonial-card fade-in">
-        <img
-          src={testimonials[current].image}
-          alt={testimonials[current].name}
-        />
-        <p>"{testimonials[current].text}"</p>
-        <h3>{testimonials[current].name}</h3>
-        <span>{testimonials[current].role}</span>
+
+        <h3>
+          {highlights[current].title}
+        </h3>
+
+
+        <p>
+          {highlights[current].text}
+        </p>
+
+
       </div>
+
+
     </section>
+
   );
 }
+
 
 export default Testimonials;

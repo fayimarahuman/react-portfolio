@@ -8,57 +8,156 @@ function Projects() {
 
       <div className="projects-container">
 
-        {/* Card 1: Web & Figma */}
+        {/* Project 1: Dental AI System */}
         <div className="project-card">
           <div className="project-info">
-            <h3>Web Development & Figma Designs</h3>
+
+            <h3>
+              AI-Powered Dental Clinic Management & No-Show Prediction System
+            </h3>
+
             <p>
-              I have been learning and creating modern web projects using React, 
-              HTML, CSS, and Flask for backend APIs. Alongside web development, 
-              I design UI/UX layouts and prototypes using Figma to make interfaces 
-              intuitive and visually appealing.
+              An intelligent healthcare management system developed to improve
+              dental clinic operations through analytics, automation, and
+              machine learning. The system includes appointment management,
+              patient records, inventory tracking, dashboards, and an AI model
+              that predicts appointment no-shows.
             </p>
+
+            <p>
+              <strong>Technologies:</strong> Python, Streamlit, Scikit-learn,
+              Pandas, PostgreSQL, Machine Learning, Data Visualization
+            </p>
+
             <div className="project-links">
+
               <button
                 className="project-link"
                 onClick={() =>
                   window.open(
-                    "https://www.figma.com/proto/Y8NzQWw0wF7QYMxbfTD3E8/figma-website?node-id=392-78&t=dticux3DnwL0w8Ze-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=263%3A190",
+                    "https://github.com/fayimarahuman/shallom-dental-clinic",
                     "_blank"
                   )
                 }
               >
-                Figma Designs
+                GitHub
               </button>
+
               <button
                 className="project-link"
-                onClick={() => window.open("https://carolineways.com/", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://shallom-dental-clinic-yoj8kzapfk4c5vsurtnq5z.streamlit.app/",
+                    "_blank"
+                  )
+                }
               >
-                Web Projects
+                Live Demo
               </button>
+
             </div>
+
           </div>
         </div>
 
-        {/* Card 2: Graphics */}
+
+        {/* Project 2: Caroline Ways Website */}
         <div className="project-card">
           <div className="project-info">
-            <h3>Graphics Work</h3>
+
+            <h3>
+              Caroline Ways Ltd Product Display Website
+            </h3>
+
             <p>
-              I create creative graphics, banners, logos, and digital artwork. 
-              My goal is to combine visual aesthetics with creativity to deliver 
-              professional and eye-catching designs.
+              A full-stack business website developed for a lighting accessories
+              company. The platform provides a responsive product display
+              experience with frontend, backend, API integration, and database
+              functionality.
             </p>
-         <button
-          className="project-link"
-          onClick={() =>
-         window.open(process.env.PUBLIC_URL + "/graphics_portfolio.pdf", "_blank")
-          }
-        >
-         Graphics Portfolio
-        </button>
+
+            <p>
+              <strong>Technologies:</strong> React.js, JavaScript, Flask,
+              REST APIs, MySQL, HTML5, CSS3, Bootstrap
+            </p>
+
+            <div className="project-links">
+
+              <button
+                className="project-link"
+                onClick={() =>
+                  window.open(
+                    "https://www.carolineways.com/",
+                    "_blank"
+                  )
+                }
+              >
+                Live Website
+              </button>
+
+              <button
+                className="project-link"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/fayimarahuman/Recess-website-projects",
+                    "_blank"
+                  )
+                }
+              >
+                GitHub
+              </button>
+
+            </div>
+
           </div>
         </div>
+
+
+        {/* Project 3: UI/UX & Graphics */}
+        <div className="project-card">
+          <div className="project-info">
+
+            <h3>
+              UI/UX Design & Creative Graphics
+            </h3>
+
+            <p>
+              Designed user interfaces, prototypes, banners, logos, and digital
+              artwork by combining creativity with design principles. Focused on
+              creating visually appealing and user-friendly digital experiences.
+            </p>
+
+            <div className="project-links">
+
+              <button
+                className="project-link"
+                onClick={() =>
+                  window.open(
+                    process.env.PUBLIC_URL + "/graphics_portfolio.pdf",
+                    "_blank"
+                  )
+                }
+              >
+                Graphics Portfolio
+              </button>
+
+              <button
+                className="project-link"
+                onClick={() =>
+                  window.open(
+                    "https://www.figma.com/",
+                    "_blank"
+                  )
+                }
+              >
+                Figma Work
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
 
       </div>
     </section>
