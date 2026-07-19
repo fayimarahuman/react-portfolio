@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-import Testimonials from "./pages/Testimonials";
+import ProfessionalHighlights from "./pages/ProfessionalHighlights";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 
@@ -29,7 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/highlights" element={<ProfessionalHighlights />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
